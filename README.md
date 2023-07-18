@@ -1,2 +1,0 @@
-# HarmonyHeights
-DIA project
