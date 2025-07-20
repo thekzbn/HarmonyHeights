@@ -509,29 +509,54 @@ blockquote footer {
 
 /* Footer */
 footer {
-    background: var(--primary);
-    color: white;
+    background: var(--bg-light);
+    color: var(--text);
     padding: 3rem 2rem 1rem;
     text-align: center;
+    border-top: 1px solid var(--border);
 }
 
 footer nav {
     justify-content: center;
-    margin-bottom: 2rem;
+    gap: 2em;
+    margin-bottom: 1.5rem;
 }
 
 footer nav a {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     transition: var(--transition);
+    position: relative;
 }
 
 footer nav a:hover {
-    color: var(--accent);
+    color: var(--secondary);
+}
+
+footer nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: var(--transition);
+}
+
+footer nav a:hover::after {
+    width: 100%;
 }
 
 footer p {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin: 0;
+    opacity: 0.8;
 }
 
 /* Responsive Design */
