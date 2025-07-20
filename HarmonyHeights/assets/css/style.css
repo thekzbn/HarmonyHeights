@@ -1,0 +1,235 @@
+/* Brutalist Hotel Theme - Harmony Heights */
+:root {
+  --bg: #fff;
+  --fg: #111;
+  --accent: #ff0040;
+  --border: #111;
+  --link: #111;
+  --link-hover: var(--accent);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+header, footer {
+  border-bottom: 4px solid var(--border);
+  border-top: 4px solid var(--border);
+  background: var(--bg);
+  padding: 0.5em 0;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+nav .logo {
+  font-size: 2.2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: var(--fg);
+  border: 3px solid var(--border);
+  padding: 0.2em 0.5em;
+  background: var(--accent);
+  color: #fff;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--link);
+  font-weight: bold;
+  font-size: 1.1em;
+  border-bottom: 2px solid transparent;
+  transition: border 0.2s, color 0.2s;
+}
+nav ul li a:hover {
+  color: var(--link-hover);
+  border-bottom: 2px solid var(--accent);
+}
+.cta {
+  background: var(--accent);
+  color: #fff !important;
+  padding: 0.5em 1.2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: 3px solid var(--border);
+  text-decoration: none;
+  margin-left: 1em;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.cta:hover {
+  background: #fff;
+  color: var(--accent) !important;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+.hero {
+  text-align: center;
+  padding: 3em 0 2em 0;
+  border-bottom: 4px solid var(--border);
+}
+.hero h1 {
+  font-size: 4em;
+  font-weight: 900;
+  margin: 0 0 0.2em 0;
+  letter-spacing: 4px;
+}
+.hero p {
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+}
+.rooms, .amenities, .reviews, .gallery, .location-contact, .book, .story, .mission, .unique, .policies-hero, .refund-policy, .cancellation-policy, .general-policy {
+  margin: 3em 0;
+}
+.rooms h2, .amenities h2, .reviews h2, .gallery h2, .location-contact h2, .book h2, .story h2, .mission h2, .unique h2, .policies-hero h1, .refund-policy h2, .cancellation-policy h2, .general-policy h2 {
+  font-size: 2.2em;
+  font-weight: 800;
+  border-left: 8px solid var(--accent);
+  padding-left: 0.5em;
+  margin-bottom: 1em;
+}
+.room-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2em;
+}
+.room {
+  border: 3px solid var(--border);
+  padding: 1em;
+  background: #f7f7f7;
+  text-align: center;
+}
+.room img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  margin-bottom: 0.5em;
+}
+.amenities ul, .unique ul, .general-policy ul {
+  list-style: square inside;
+  padding-left: 0;
+}
+.amenities li, .unique li, .general-policy li {
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}
+.reviews blockquote {
+  border-left: 8px solid var(--accent);
+  margin: 1em 0;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  background: #f7f7f7;
+  font-style: italic;
+}
+.reviews footer {
+  font-size: 1em;
+  font-style: normal;
+  color: var(--accent);
+  margin-top: 0.5em;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1em;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border: 3px solid var(--border);
+}
+.location-contact address {
+  font-style: normal;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+.map-placeholder {
+  width: 100%;
+  height: 180px;
+  background: #eee;
+  border: 3px dashed var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: var(--accent);
+}
+.book form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+  align-items: end;
+}
+.book label {
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+.book input, .book button {
+  font-size: 1em;
+  padding: 0.5em;
+  border: 2px solid var(--border);
+  background: #fff;
+  color: var(--fg);
+  font-family: inherit;
+}
+.book button {
+  grid-column: span 4;
+  margin-top: 1em;
+}
+footer {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 2em;
+  border-top: 4px solid var(--border);
+  padding: 1em 0 0.5em 0;
+}
+footer nav {
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 0.5em;
+}
+@media (max-width: 800px) {
+  nav ul {
+    gap: 1em;
+  }
+  .room-list, .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .book form {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 2.2em;
+  }
+  nav .logo {
+    font-size: 1.2em;
+    padding: 0.1em 0.3em;
+  }
+  main {
+    padding: 1em 0.2em;
+  }
+} 
